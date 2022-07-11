@@ -1,0 +1,8 @@
+.idea/jpa-buddy.xml
+target/classes/com/test/shiro/ShiroDemoApplication.class
+target/classes/com/test/shiro/Quickstart/QuickStart.class
+target/classes/com/test/shiro/Quickstart/controller/ShiroController.class
+target/classes/com/test/shiro/Quickstart/demo/AuthenticationTest.class
+target/classes/com/test/shiro/Quickstart/demo/MyRealm.class
+target/classes/com/test/shiro/Quickstart/demo/SaltPassWord.class
+target/*
