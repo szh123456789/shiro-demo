@@ -1,4 +1,4 @@
-package com.test.shiro.Quickstart.demo;
+package com.test.shiro.demo;
 
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;

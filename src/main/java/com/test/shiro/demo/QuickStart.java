@@ -1,4 +1,4 @@
-package com.test.shiro.Quickstart;
+package com.test.shiro.demo;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;

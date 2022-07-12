@@ -1,4 +1,4 @@
-package com.test.shiro.Quickstart.demo;
+package com.test.shiro.demo;
 
 import org.apache.shiro.crypto.SecureRandomNumberGenerator;
 import org.apache.shiro.crypto.hash.SimpleHash;

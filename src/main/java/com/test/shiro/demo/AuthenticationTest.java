@@ -1,13 +1,11 @@
-package com.test.shiro.Quickstart.demo;
+package com.test.shiro.demo;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.mgt.DefaultSecurityManager;
-import org.apache.shiro.realm.SimpleAccountRealm;
 import org.apache.shiro.subject.Subject;
-import org.junit.Before;
 import org.springframework.stereotype.Service;
 
 @Service
