@@ -1,16 +1,19 @@
-package com.test.shiro.demo;
+package com.shiro.test.demo;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
+import org.junit.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.stereotype.Service;
 
-@Service
+@SpringBootTest
 @Slf4j
 public class QuickStart {
 
+    @Test
     public void test(){
         Subject currentUser = SecurityUtils.getSubject();
         Session session = currentUser.getSession();

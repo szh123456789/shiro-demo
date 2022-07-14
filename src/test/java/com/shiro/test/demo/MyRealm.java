@@ -1,4 +1,4 @@
-package com.test.shiro.demo;
+package com.shiro.test.demo;
 
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;

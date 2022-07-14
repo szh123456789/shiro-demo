@@ -1,5 +1,6 @@
 package com.test.shiro.Quickstart.config;
 
+import com.test.shiro.Quickstart.filter.RoleFilter;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.mgt.SecurityManager;
@@ -10,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 
+import javax.servlet.Filter;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -33,8 +35,15 @@ public class ShiroConfig {
         // 过滤链定义，从上到下顺序执行，一般将/**放在最下边
         //authc:所有url都必须认证通过才可以访问; anon:所有url都可以匿名访问
         filterChainDefinitionMap.put("/**", "authc");
+
+        Map<String, Filter> filterMap = shiroFilterFactoryBean.getFilters();
+        filterMap.put("authc", new RoleFilter());
+
+        shiroFilterFactoryBean.setFilters(filterMap);
+
         //如果不设置默认会自动寻找web工程根目录下的“/login.jsp”页面
         shiroFilterFactoryBean.setLoginUrl("/login");
+
         //登录成功后要跳转的链接
         shiroFilterFactoryBean.setSuccessUrl("/index");
 

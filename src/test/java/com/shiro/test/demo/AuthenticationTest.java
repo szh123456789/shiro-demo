@@ -1,4 +1,4 @@
-package com.test.shiro.demo;
+package com.shiro.test.demo;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -6,16 +6,19 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.mgt.DefaultSecurityManager;
 import org.apache.shiro.subject.Subject;
+import org.junit.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.stereotype.Service;
 
-@Service
+@SpringBootTest
 @RequiredArgsConstructor
 @Slf4j
 public class AuthenticationTest {
 
 //    private static final SimpleAccountRealm simpleAccountRealm = new SimpleAccountRealm();
 
-    public static void testAuthentication(){
+    @Test
+    public  void testAuthentication(){
 //        simpleAccountRealm.addAccount("wmyskxz", "123456");
 //        simpleAccountRealm.addAccount("wmyskxz", "123456", "admin", "user");
 
@@ -42,7 +45,4 @@ public class AuthenticationTest {
         log.info("isAuthenticated:" + subject.isAuthenticated());
     }
 
-    public static void main(String[] args) {
-        testAuthentication();
-    }
 }

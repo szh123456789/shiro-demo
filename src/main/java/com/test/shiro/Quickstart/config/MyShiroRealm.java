@@ -4,7 +4,6 @@ import com.test.shiro.Quickstart.entity.SysPermission;
 import com.test.shiro.Quickstart.entity.SysRole;
 import com.test.shiro.Quickstart.entity.UserInfo;
 import com.test.shiro.Quickstart.service.UserInfoService;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;

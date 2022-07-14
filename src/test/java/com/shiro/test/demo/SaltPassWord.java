@@ -1,11 +1,13 @@
-package com.test.shiro.demo;
+package com.shiro.test.demo;
 
 import org.apache.shiro.crypto.SecureRandomNumberGenerator;
 import org.apache.shiro.crypto.hash.SimpleHash;
+import org.junit.Test;
 
 public class SaltPassWord {
 
-    public static void main(String[] args) {
+    @Test
+    public  void password() {
 
         String password = "123456";
         String salt = new SecureRandomNumberGenerator().nextBytes().toString();
